@@ -30,7 +30,10 @@
             Alamat :
             <input type="text" name="alamat" value="<?php echo $data_update['alamat'] ?>"><br>
             Jenis Kelamin :
-            <input type="text" name="jenis_kelamin" value="<?php echo $data_update['jenis_kelamin'] ?>"><br>
+            <select name="jenis_kelamin">
+                <option value="1" <?php if($data_update['jenis_kelamin']==1) echo 'selected="selected"'; ?>>Laki-laki</option>
+                <option value="2" <?php if($data_update['jenis_kelamin']==2) echo 'selected="selected"'; ?> >Perempuan</option>
+            </select><br/>
             Tanggal Lahir :
             <input type="date" name="tanggal_lahir" value="<?php echo $data_update['tanggal_lahir'] ?>"><br>
 

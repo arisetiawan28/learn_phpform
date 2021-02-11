@@ -8,7 +8,11 @@
             Nama: <input type="text" name="nama"><br/>
             Nomor KTP: <input type="text" name="nomor_ktp"><br/>
             Alamat: <input type="text" name="alamat"><br/>
-            Jenis Kelamin: <input type="text" name="jenis_kelamin"><br/>
+            Jenis Kelamin: 
+            <select name="jenis_kelamin">
+                <option value="1">Laki-laki</option>
+                <option value="2">Perempuan</option>
+            </select><br/>
             Tanggal Lahir: <input type="date" name="tanggal_lahir"><br/>
             <button type="submit">SIMPAN</button>
         </form>

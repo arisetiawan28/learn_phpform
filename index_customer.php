@@ -28,6 +28,7 @@
         <b>Daftar Customer</b>
         <a href="insert_customer.php">Tambah Customer</a>
         <a href="index.php">Daftar Bandara</a>
+        <a href="index_pesawat.php">Daftar Pesawat</a>
 
         <form action="" method="GET">
             <input type="text" name="keyword" value="<?php echo $keyword; ?>">
@@ -50,7 +51,8 @@
                 if($keyword!=""){
                     $sql_customer = "SELECT * FROM customer WHERE 
                         nama LIKE '%".$keyword."%' OR 
-                        nomor_ktp LIKE '%".$keyword."%'";
+                        nomor_ktp LIKE '%".$keyword."%' OR
+                        alamat LIKE '%".$keyword."%'";
                 }
 
                 $result_customer = $connection->query($sql_customer);
@@ -64,15 +66,20 @@
                         echo "<td>".$row['nama']."</td>";
                         echo "<td>".$row['nomor_ktp']."</td>";
                         echo "<td>".$row['alamat']."</td>";
-                        echo "<td>".$row['jenis_kelamin']."</td>";
-                        echo "<td>".$row['tanggal_lahir']."</td>";
+                        if ($row['jenis_kelamin']==1){
+                            echo "<td>Laki-laki</td>";
+                        }
+                        else {
+                            echo "<td>Perempuan</td>";
+                        }
+                        echo "<td>".date('d M Y',strtotime($row['tanggal_lahir']))."</td>";
                         echo "<td><a href='update_customer.php?id=".$row['id']."'>Update</a></td>";
                         echo "<td><a href='delete_customer.php?id=".$row['id']."'>Delete</a></td>";
                         echo "</tr>";
                         $i++;
                     }
                 }else{
-                    echo "<tr><td colspan='7'>Tidak ada data yang ditampilkan</td></tr>";
+                    echo "<tr><td colspan='8'>Tidak ada data yang ditampilkan</td></tr>";
                 }
             ?>
         </table>
