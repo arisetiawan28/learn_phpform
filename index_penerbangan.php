@@ -42,6 +42,7 @@
                 <td>Bandara Tujuan</td>
                 <td>Waktu Penerbangan</td>
                 <td>Status Penerbangan</td>
+                <td>Detail</td>
                 <td>Update</td>
                 <td>Delete</td>
             </tr>

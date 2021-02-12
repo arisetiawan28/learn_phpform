@@ -5,8 +5,9 @@
     <body>
         <b>Form Penerbangan</b><br/>
         <form method="POST" action="">
-            Kode Pesawat: <input type="text" name="kode_pesawat"><br/>
-            Tahun Pembuatan: <input type="text" name="tahun_pembuatan"><br/>
+            Pesawat: <input type="text" name="id_pesawat"><br/>
+            Bandara Asal: <input type="text" name="id_bandara_dari"><br/>
+            Bandara Tujuan: <input type="text" name="id_bandara_tujuan"><br/>
             Nama Pesawat: <input type="text" name="nama_pesawat"><br/>
             Nama Maskapai: <input type="text" name="nama_maskapai"><br/>
             <button type="submit">SIMPAN</button>
